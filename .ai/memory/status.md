@@ -24,12 +24,10 @@
   - shards.info and crystaldoc.info, which have only the old path so far.
     The site's Shard stats link stays on shards.info's old page until it
     has the new one.
-- **The site** (see [layout.md](layout.md)): it goes live once
-  `jargon.openbohemians.org` has a CNAME record at Dynadot (the user's to
-  add) and Pages is on for `openbohemians/Jargon`, from `main:/docs`.
-  Until then the home page is offline, since jargon.cr's Pages now serves
-  only its API docs. The Rust API docs wait on publishing to crates.io
-  (docs.rs).
+- **The site** is live at https://jargon.openbohemians.org since
+  2026-10-23 (see [layout.md](layout.md)), and
+  https://openbohemians.org/jargon.cr/ serves jargon.cr's API docs. The
+  Rust API docs wait on publishing to crates.io (docs.rs).
 - **Help layout**, noticed 2026-10-23 while checking the site's demo
   against real output: a description sits at the same indent as a
   long-only flag (six spaces), so it reads as another option, and an

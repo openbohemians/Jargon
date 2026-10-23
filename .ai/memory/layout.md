@@ -56,6 +56,17 @@ The page came from jargon.cr's `docs/` (its history is there, through
 languages: Crystal and Rust tabs, an "Oxidize" demo beside "Crystallize",
 and demo output taken from real runs of both. `openbohemians.org` is at
 Dynadot; the org repository's `DNS-SETUP.md` says how its records are set.
+The subdomain is a CNAME record, `jargon` to `openbohemians.github.io`
+(the user added it, 2026-10-23); the organization's verification of
+`openbohemians.org` covers it.
+
+**Lesson (2026-10-23):** Pages was given the custom domain before the
+DNS record resolved, and GitHub never requested a certificate: no
+`https_certificate` after 30 minutes, and re-saving the same domain did
+nothing. Removing the domain and adding it back got one approved within
+a minute. For a branch-published site that makes GitHub commit "Delete
+CNAME" and "Create CNAME" to `main` (`4f36950`, `df40fa1`), so pull
+afterwards. Then turn on Enforce HTTPS.
 
 ## Setting up on a machine
 
