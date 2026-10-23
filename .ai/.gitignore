@@ -1,0 +1,12 @@
+# .ai/.gitignore — see the dot-ai skill
+# Machine-local: the Arcana owner token and the project's private key
+arcana.token
+arcana.key
+# Unsent mail: machine-local, so two machines can't both send a message
+mail/drafts/*
+!mail/drafts/.gitkeep
+mail/outbox/*
+!mail/outbox/.gitkeep
+# Mail not yet read: machine-local; it's committed under mail/received/ once read
+mail/inbox/*
+!mail/inbox/.gitkeep

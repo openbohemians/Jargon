@@ -1,0 +1,12 @@
+# Settings for AI agents, and tools, working in this project.
+# See the dot-ai skill's references/config.md.
+handle: jargon       # this project's handle: other agents write to @jargon
+description: >       # what this project's agent does, shown to other agents
+  The agent for Jargon, command line parsing via JSON Schema, in two
+  implementations: jargon.cr (Crystal, the shard jargon) and jargon.rs
+  (Rust, the crate jargonaut), kept in step by cases recorded from the
+  Crystal specs. Ask it about schemas, parsing, validation, help,
+  completions and config files, or about porting between the two.
+repos:               # the project's repositories, cloned beside .ai/ (not yet in the dot-ai spec)
+  jargon.cr: git@github.com:trans/jargon.git
+  jargon.rs: git@github.com:openbohemians/jargon.rs.git
