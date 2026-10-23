@@ -13,9 +13,14 @@
 
 ## Open
 
-- **jargon.rs's API shape**: waiting on the user's review; the questions
-  are in [port.md](port.md).
-- **Publishing jargonaut** to crates.io: not done.
+- **Publishing jargonaut** 0.1.0 to crates.io: the user's API review is
+  done and made in jargon.rs `6da8860` ([port.md](port.md)), with every
+  public item documented and `cargo add jargonaut` in the README; not
+  yet published. After publishing, the site's Rust tab and demo move from
+  the git dependency and `parse(&args)` to the crate and `parse()`.
+- **jargon.cr's `help(subcommand)` raises** for an unknown subcommand
+  (part of the same review), in `9ba7b9c`, not yet released; a changed
+  public method, so 0.23.0.
 - **The old path, `trans/jargon`**, after the move to
   `openbohemians/jargon.cr` (2026-10-23, [layout.md](layout.md)). GitHub
   redirects it, so nothing is broken, but these still name it:

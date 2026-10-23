@@ -16,9 +16,9 @@ working on the code needs belongs in the project's own docs, not here.
 
 | File | What it holds |
 |---|---|
-| [status.md](status.md) | Released versions and the open items: jargon.rs's API review and crates.io, what still names `trans/jargon`, putting the site live, the help layout, registered config formats for jargon.cr, the `ui:` proposal, the parse/resolve README note |
+| [status.md](status.md) | Released versions and the open items: publishing jargonaut, jargon.cr's `help` change, what still names `trans/jargon`, the site, the help layout, registered config formats for jargon.cr, the `ui:` proposal, the parse/resolve README note |
 | [layout.md](layout.md) | One project, three repositories: `Jargon` holds `.ai/`, the site, and the folder the two code repositories are cloned in; where the API docs live; setup, what's off the dot-ai spec |
-| [port.md](port.md) | jargon.rs: how it stays in step with jargon.cr (conformance cases), what's decided, the API questions still open, lessons from the port |
+| [port.md](port.md) | jargon.rs: how it stays in step with jargon.cr (conformance cases), what's decided, the API review's outcome, lessons from the port |
 | [completions.md](completions.md) | Dynamic shell completions (jargon.cr 0.19.0): the design and why, and its known limits |
 | [conventions.md](conventions.md) | How the user wants APIs designed, and jargon.cr's ameba settings |
 | [coordination.md](coordination.md) | This project's handle (`@jargon`), mail sent before it had one, and the projects it corresponds with: @oyl, transfs |

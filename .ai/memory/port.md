@@ -35,13 +35,32 @@ environment variables, JSON on stdin, help, merge, flatten, completion
 - Its dependencies are serde_json (`preserve_order`), indexmap and
   fancy-regex.
 
-## Open: the API shape, for the user's review
+## The API review (the user, 2026-10-23)
 
-`set_` setters; `ParseOptions`; a panic on a CLI with neither a schema nor
-subcommands; the name `help_for`; the `Shell` enum; the completer
-signature; `handle_completion` not exiting; `ConfigOptions`, with warnings
-a per-call field instead of jargon.cr's global switch; `config_paths`
-taking `ConfigOptions`; `run` taking explicit args.
+Settled before publishing 0.1.0, and made in jargon.rs `6da8860` and
+jargon.cr `9ba7b9c`:
+
+- Clap's naming: `run()`, `parse()` and `json()` read the program's own
+  command line, `run_from`/`parse_from`/`json_from` take one, and the
+  `_with` forms take one plus `ParseOptions`. The arguments stay a
+  separate parameter, and `ParseOptions` keeps `defaults`, `stdin` and
+  `env` (the user: "args aren't parse options"; renaming it to `Inputs`
+  or `Sources` was weighed and dropped).
+- A command line starts with the program's name, as in Clap and
+  `std::env::args_os`; Crystal's leaves it out, as `ARGV` does, and stays
+  that way. Any `AsRef<OsStr>` items; an argument that isn't UTF-8 is a
+  parse error, not a panic. `handle_completion` takes the same.
+- `help_for` returns `Result`, an unknown subcommand being
+  `Error::Usage`; jargon.cr's `help(subcommand)` now raises
+  `ArgumentError` for one too, as `validate` does.
+- `Shell`, `Property`, `Schema`, `Parsed` and `CompletionContext` are
+  `#[non_exhaustive]`; `complete` takes a `usize` cursor.
+- Kept as they were: the `set_` setters, `ParseOptions`, the panic on a
+  CLI with neither a schema nor subcommands, the completer signature
+  (`Send + Sync`), `handle_completion` not exiting, `ConfigOptions` with
+  a per-call `warnings`, `config_paths(ConfigOptions)`, and
+  `CompletionContext.subcommand` dot-separated (as completer paths are)
+  where `Parsed.subcommand` is space-separated, as in jargon.cr.
 
 ## Lessons
 
