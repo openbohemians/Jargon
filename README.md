@@ -3,7 +3,7 @@
 The project folder for Jargon, command line parsing via JSON Schema: a
 program describes its options as a schema, and Jargon parses, validates
 and documents its command line from it. Jargon is two implementations:
-[jargon.cr](https://github.com/trans/jargon) in Crystal (the shard
+[jargon.cr](https://github.com/openbohemians/jargon.cr) in Crystal (the shard
 `jargon`), and [jargon.rs](https://github.com/openbohemians/jargon.rs) in
 Rust (the crate `jargonaut`), which replays cases recorded from the Crystal
 spec suite to stay in step. This repository holds neither's code. It holds
@@ -25,7 +25,7 @@ upward, so it is `@jargon` wherever it starts.
 ```sh
 git clone git@github.com:openbohemians/Jargon.git
 cd Jargon
-git clone git@github.com:trans/jargon.git jargon.cr
+git clone git@github.com:openbohemians/jargon.cr.git
 git clone git@github.com:openbohemians/jargon.rs.git
 ```
 

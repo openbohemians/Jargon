@@ -16,8 +16,17 @@
 - **jargon.rs's API shape**: waiting on the user's review; the questions
   are in [port.md](port.md).
 - **Publishing jargonaut** to crates.io: not done.
-- **Renaming `trans/jargon` to `jargon.cr`**: expected, not done (see
-  [layout.md](layout.md)).
+- **The old path, `trans/jargon`**, after the move to
+  `openbohemians/jargon.cr` (2026-10-23, [layout.md](layout.md)). GitHub
+  redirects it, so nothing is broken, but these still name it:
+  - other shards' `shard.yml` and `shard.lock` (`github: trans/jargon`),
+    for their own agents or the user to change;
+  - shards.info and crystaldoc.info, which have only the old path so far
+    (the landing page's Shard stats link stays on it until shards.info
+    has the new one; its API docs link now points at the docs on Pages);
+  - two stale API pages in jargon.cr, `docs/api/Jargon/FlagInfo.html` and
+    `SubcommandInfo.html`, for classes removed in v0.19.0, which
+    `crystal docs` doesn't delete.
 - **A `ui:` keyword**: a strong proposal (the user's words, 2026-06-12) to
   bless `ui:` as a first-class opaque keyword, like `service:`, as sugar
   for GUI hints, which today go in `x-ui`. Not decided; don't treat it as

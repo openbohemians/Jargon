@@ -8,5 +8,5 @@ description: >       # what this project's agent does, shown to other agents
   Crystal specs. Ask it about schemas, parsing, validation, help,
   completions and config files, or about porting between the two.
 repos:               # the project's repositories, cloned beside .ai/ (not yet in the dot-ai spec)
-  jargon.cr: git@github.com:trans/jargon.git
+  jargon.cr: git@github.com:openbohemians/jargon.cr.git
   jargon.rs: git@github.com:openbohemians/jargon.rs.git

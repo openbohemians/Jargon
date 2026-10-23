@@ -12,17 +12,17 @@ repositories are clones inside it:
 ```
 Jargon/              clone of openbohemians/Jargon
   .ai/               notes, mail, config.yml
-  jargon.cr/         clone of trans/jargon, ignored by Jargon
+  jargon.cr/         clone of openbohemians/jargon.cr, ignored by Jargon
   jargon.rs/         clone of openbohemians/jargon.rs
 ```
 
-The Crystal clone is named `jargon.cr` (the user, 2026-10-23), so the two
-read as implementations of one thing. Its GitHub repository is still
-`trans/jargon`, and the shard stays `jargon`. The user expects the
-repository to become `jargon.cr` too ("probably", 2026-10-22); **not
-done**. If it is renamed, update `repos:` in `../config.yml`, the clone
-line in the README and below, and the links to `github.com/trans/jargon`
-in jargon.rs's README and jargon.cr's `conformance/README.md`.
+The Crystal repository is `jargon.cr`, so the two read as implementations
+of one thing; the shard is still `jargon`. It was `trans/jargon` until
+2026-10-23, when the user had it moved to openbohemians and renamed. GitHub
+redirects the old URL, git included, as long as no new `trans/jargon` is
+created; its Pages site moved from `trans.github.io/jargon` (now a 404) to
+`openbohemians.org/jargon.cr`. See [status.md](status.md) for what still
+names the old path.
 
 A session in either, or in the folder itself, walks up to the nearest
 `.ai/` and is `@jargon`. Git for the notes works from anywhere in the
@@ -41,7 +41,7 @@ those sessions was moved into these notes when the folder was set up.
 ```sh
 git clone git@github.com:openbohemians/Jargon.git
 cd Jargon
-git clone git@github.com:trans/jargon.git jargon.cr
+git clone git@github.com:openbohemians/jargon.cr.git
 git clone git@github.com:openbohemians/jargon.rs.git
 ```
 

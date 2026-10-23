@@ -16,7 +16,7 @@ working on the code needs belongs in the project's own docs, not here.
 
 | File | What it holds |
 |---|---|
-| [status.md](status.md) | Released versions and the open items: jargon.rs's API review and crates.io, the repository rename, registered config formats for jargon.cr, the `ui:` proposal, the parse/resolve README note |
+| [status.md](status.md) | Released versions and the open items: jargon.rs's API review and crates.io, what still names `trans/jargon`, registered config formats for jargon.cr, the `ui:` proposal, the parse/resolve README note |
 | [layout.md](layout.md) | One project, three repositories: `Jargon` holds `.ai/` and the folder the two code repositories are cloned in; setup, what's off the dot-ai spec |
 | [port.md](port.md) | jargon.rs: how it stays in step with jargon.cr (conformance cases), what's decided, the API questions still open, lessons from the port |
 | [completions.md](completions.md) | Dynamic shell completions (jargon.cr 0.19.0): the design and why, and its known limits |
