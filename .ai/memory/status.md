@@ -8,16 +8,16 @@
   releases. v0.22.0 fixed the bugs the Rust port found, v0.22.1 names
   schema types in type errors ("expected integer, got object"), and
   v0.22.2 reports a value that doesn't convert once, not twice.
-- **jargon.rs**: `main` at `842dfb3`, its cases synced from jargon.cr
-  v0.22.2. The crate `jargonaut` is **not on crates.io yet**.
+- **jargonaut 0.1.0** on crates.io (2026-10-23), published from jargon.rs
+  `6da8860`, after the user's API review ([port.md](port.md)); its cases
+  are synced from jargon.cr `9ba7b9c`. Not tagged in git yet. Its API
+  docs are docs.rs's.
 
 ## Open
 
-- **Publishing jargonaut** 0.1.0 to crates.io: the user's API review is
-  done and made in jargon.rs `6da8860` ([port.md](port.md)), with every
-  public item documented and `cargo add jargonaut` in the README; not
-  yet published. After publishing, the site's Rust tab and demo move from
-  the git dependency and `parse(&args)` to the crate and `parse()`.
+- **The site after publishing**: its Rust tab and demo still show the
+  git dependency and `parse(&args)`; they should show `cargo add
+  jargonaut` and `parse()`.
 - **jargon.cr's `help(subcommand)` raises** for an unknown subcommand
   (part of the same review), in `9ba7b9c`, not yet released; a changed
   public method, so 0.23.0.
@@ -31,8 +31,8 @@
     has the new one.
 - **The site** is live at https://jargon.openbohemians.org since
   2026-10-23 (see [layout.md](layout.md)), and
-  https://openbohemians.org/jargon.cr/ serves jargon.cr's API docs. The
-  Rust API docs wait on publishing to crates.io (docs.rs).
+  https://openbohemians.org/jargon.cr/ serves jargon.cr's API docs;
+  jargonaut's are at https://docs.rs/jargonaut.
 - **Help layout**, noticed 2026-10-23 while checking the site's demo
   against real output: a description sits at the same indent as a
   long-only flag (six spaces), so it reads as another option, and an

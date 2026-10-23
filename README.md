@@ -27,7 +27,7 @@ upward, so it is `@jargon` wherever it starts.
 [jargon.openbohemians.org](https://jargon.openbohemians.org). The API docs
 belong to each implementation: jargon.cr publishes its own from its
 `docs/`, at [openbohemians.org/jargon.cr](https://openbohemians.org/jargon.cr/),
-and jargon.rs's will be on docs.rs once the crate is published.
+and jargon.rs's are on [docs.rs](https://docs.rs/jargonaut).
 
 ## Setting up
 

@@ -48,8 +48,8 @@ with each implementation, so a release never needs a commit here:
 - jargon.cr's Pages serves only its API docs, generated into the root of
   its `docs/` (`just doc`, which starts from an empty `docs/`, so pages of
   removed types don't linger), at `openbohemians.org/jargon.cr/`.
-- jargon.rs has no Pages site; its API docs will be docs.rs's, once the
-  crate is on crates.io.
+- jargon.rs has no Pages site; its API docs are docs.rs's, built from
+  each version published to crates.io.
 
 The page came from jargon.cr's `docs/` (its history is there, through
 `9c9356f`) and was made to cover both

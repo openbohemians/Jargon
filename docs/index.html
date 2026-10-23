@@ -329,7 +329,7 @@ Options:
           <h3>From dependency to CLI</h3>
           <p>
             Add Jargon to your <code>shard.yml</code> and run <code>shards update</code>,
-            or add it to your <code>Cargo.toml</code>. Then define your schema, wire it
+            or run <code>cargo add jargonaut</code>. Then define your schema, wire it
             up in your code (easy peasy), and enjoy a friendly CLI.
           </p>
         </div>
@@ -350,8 +350,8 @@ dependencies:
             <button class="copy">Copy</button>
             <pre><code># Cargo.toml
 
-[dependencies.jargonaut]
-git = "https://github.com/openbohemians/jargon.rs"</code></pre>
+[dependencies]
+jargonaut = "0.1"</code></pre>
           </div>
         </div>
       </div>
@@ -382,11 +382,17 @@ git = "https://github.com/openbohemians/jargon.rs"</code></pre>
             >
               Crystal API docs
             </a>
+            <a class="btn" href="https://docs.rs/jargonaut">
+              Rust API docs
+            </a>
             <a
               class="btn"
               href="https://shards.info/github/trans/jargon/"
             >
               Shard stats
+            </a>
+            <a class="btn" href="https://crates.io/crates/jargonaut">
+              Crate stats
             </a>
           </div>
         </div>
