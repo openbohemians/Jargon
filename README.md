@@ -13,12 +13,21 @@ what they share: `.ai/`, the notes and mail of the project's agent,
 ```
 Jargon/              this repository
   .ai/               the project's notes, mail and config.yml
+  docs/              the project's site
   jargon.cr/         its own clone, ignored here
   jargon.rs/
 ```
 
 A session in either, or in the folder itself, finds `.ai/` by looking
 upward, so it is `@jargon` wherever it starts.
+
+## The site
+
+`docs/` is published with GitHub Pages at
+[jargon.openbohemians.org](https://jargon.openbohemians.org). The API docs
+belong to each implementation: jargon.cr publishes its own from its
+`docs/`, at [openbohemians.org/jargon.cr](https://openbohemians.org/jargon.cr/),
+and jargon.rs's will be on docs.rs once the crate is published.
 
 ## Setting up
 

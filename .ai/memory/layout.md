@@ -36,6 +36,27 @@ no `.ai/` of their own, so their sessions were the overseer's,
 [coordination.md](coordination.md)). The agent's per-machine memory from
 those sessions was moved into these notes when the folder was set up.
 
+## The site
+
+Decided by the user, 2026-10-23: the home page is the project's, so it
+lives here, in `docs/`, published with GitHub Pages at the subdomain
+`jargon.openbohemians.org` (`docs/CNAME`). A subdomain, because Pages
+paths are case-sensitive: this repository's default would be
+`openbohemians.org/Jargon/`, and `/jargon/` would 404. The API docs stay
+with each implementation, so a release never needs a commit here:
+
+- jargon.cr's Pages serves only its API docs, generated into the root of
+  its `docs/` (`just doc`, which starts from an empty `docs/`, so pages of
+  removed types don't linger), at `openbohemians.org/jargon.cr/`.
+- jargon.rs has no Pages site; its API docs will be docs.rs's, once the
+  crate is on crates.io.
+
+The page came from jargon.cr's `docs/` (its history is there, through
+`9c9356f`) and was made to cover both
+languages: Crystal and Rust tabs, an "Oxidize" demo beside "Crystallize",
+and demo output taken from real runs of both. `openbohemians.org` is at
+Dynadot; the org repository's `DNS-SETUP.md` says how its records are set.
+
 ## Setting up on a machine
 
 ```sh

@@ -21,12 +21,20 @@
   redirects it, so nothing is broken, but these still name it:
   - other shards' `shard.yml` and `shard.lock` (`github: trans/jargon`),
     for their own agents or the user to change;
-  - shards.info and crystaldoc.info, which have only the old path so far
-    (the landing page's Shard stats link stays on it until shards.info
-    has the new one; its API docs link now points at the docs on Pages);
-  - two stale API pages in jargon.cr, `docs/api/Jargon/FlagInfo.html` and
-    `SubcommandInfo.html`, for classes removed in v0.19.0, which
-    `crystal docs` doesn't delete.
+  - shards.info and crystaldoc.info, which have only the old path so far.
+    The site's Shard stats link stays on shards.info's old page until it
+    has the new one.
+- **The site** (see [layout.md](layout.md)): it goes live once
+  `jargon.openbohemians.org` has a CNAME record at Dynadot (the user's to
+  add) and Pages is on for `openbohemians/Jargon`, from `main:/docs`.
+  Until then the home page is offline, since jargon.cr's Pages now serves
+  only its API docs. The Rust API docs wait on publishing to crates.io
+  (docs.rs).
+- **Help layout**, noticed 2026-10-23 while checking the site's demo
+  against real output: a description sits at the same indent as a
+  long-only flag (six spaces), so it reads as another option, and an
+  enum's values aren't listed. The same in both implementations. Not
+  discussed with the user yet.
 - **A `ui:` keyword**: a strong proposal (the user's words, 2026-06-12) to
   bless `ui:` as a first-class opaque keyword, like `service:`, as sugar
   for GUI hints, which today go in `x-ui`. Not decided; don't treat it as
