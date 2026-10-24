@@ -1,26 +1,22 @@
 # Status
 
-*Updated 2026-10-23*
+*Updated 2026-10-24*
 
 ## Released
 
-- **jargon.cr v0.22.2** (`29b4cc6`, 2026-10-22), tagged and on GitHub
-  releases. v0.22.0 fixed the bugs the Rust port found, v0.22.1 names
-  schema types in type errors ("expected integer, got object"), and
-  v0.22.2 reports a value that doesn't convert once, not twice.
+- **jargon.cr v0.23.0** (`5ad886b`, 2026-10-24), tagged and on GitHub
+  releases: `help(subcommand)` raises `ArgumentError` for an unknown
+  subcommand (`9ba7b9c`, from the user's API review of jargonaut,
+  [port.md](port.md)), where it returned "Unknown subcommand: x" as
+  help. Before it, v0.22.0 fixed the bugs the Rust port found, v0.22.1
+  named schema types in type errors, and v0.22.2 reported a value that
+  doesn't convert once, not twice.
 - **jargonaut 0.1.0** on crates.io (2026-10-23), published from jargon.rs
-  `6da8860`, after the user's API review ([port.md](port.md)); its cases
-  are synced from jargon.cr `9ba7b9c`. Not tagged in git yet. Its API
-  docs are docs.rs's.
+  `6da8860` and tagged `v0.1.0` there; its cases are synced from
+  jargon.cr `9ba7b9c`, so it matches v0.23.0. Its API docs are docs.rs's.
 
 ## Open
 
-- **The site after publishing**: its Rust tab and demo still show the
-  git dependency and `parse(&args)`; they should show `cargo add
-  jargonaut` and `parse()`.
-- **jargon.cr's `help(subcommand)` raises** for an unknown subcommand
-  (part of the same review), in `9ba7b9c`, not yet released; a changed
-  public method, so 0.23.0.
 - **The old path, `trans/jargon`**, after the move to
   `openbohemians/jargon.cr` (2026-10-23, [layout.md](layout.md)). GitHub
   redirects it, so nothing is broken, but these still name it:
@@ -32,12 +28,14 @@
 - **The site** is live at https://jargon.openbohemians.org since
   2026-10-23 (see [layout.md](layout.md)), and
   https://openbohemians.org/jargon.cr/ serves jargon.cr's API docs;
-  jargonaut's are at https://docs.rs/jargonaut.
+  jargonaut's are at https://docs.rs/jargonaut. Its Rust tab shows
+  jargonaut 0.1 from crates.io and `cli.parse()` (`cf8d15e`, `93c9853`).
 - **Help layout**, noticed 2026-10-23 while checking the site's demo
   against real output: a description sits at the same indent as a
   long-only flag (six spaces), so it reads as another option, and an
   enum's values aren't listed. The same in both implementations. Not
-  discussed with the user yet.
+  discussed with the user yet. Fixing it changes help output in both,
+  so it means a release of each (jargon.cr 0.24.0 was suggested).
 - **A `ui:` keyword**: a strong proposal (the user's words, 2026-06-12) to
   bless `ui:` as a first-class opaque keyword, like `service:`, as sugar
   for GUI hints, which today go in `x-ui`. Not decided; don't treat it as
