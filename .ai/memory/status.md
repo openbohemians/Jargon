@@ -30,25 +30,30 @@
   https://openbohemians.org/jargon.cr/ serves jargon.cr's API docs;
   jargonaut's are at https://docs.rs/jargonaut. Its Rust tab shows
   jargonaut 0.1 from crates.io and `cli.parse()` (`cf8d15e`, `93c9853`).
-- **Help layout**, noticed 2026-10-23: a description sat at the same
-  indent as a long-only flag, so it read as another option, and an
-  enum's values weren't listed. The user chose (2026-10-24) two columns,
-  aligned like `Commands:`, and an enum's values written `[fast|safe]`
-  after the description (not "possible values"), then `(required)` and
-  `[default: …]`. The column stops 32 characters in; a wider flag has
-  its description on the next line. **Committed, not yet released**:
-  jargon.cr `660cb9d` (after `ea32f23`, which drops the stale TODO entry
-  for the double variadic error), jargon.rs `3673600`, synced from
-  `660cb9d`. The user made this 0.24. After the releases, the site's help demo in `docs/index.html`
-  needs the new output.
+- **Next release: jargon.cr 0.23.1 and jargonaut 0.1.1**, patch bumps,
+  since only output and fixes changed (the user, 2026-10-24). Committed,
+  not pushed or released:
+  - Help in two columns (jargon.cr `660cb9d`, jargon.rs `3673600`). The
+    user chose two columns, aligned like `Commands:`, and an enum's values
+    as `[fast|safe]` after the description (not "possible values"), then
+    `(required)` and `[default: …]`. The column stops 32 characters in; a
+    wider flag has its description on the next line.
+  - `Commands:` descriptions laid out the same way, an empty string shown
+    as `""` (the user's choice), the column limit private (`1611f7e`,
+    `926239a`).
+  - Completion after an abbreviated subcommand, the TODO follow-up
+    (`ca10721`, `096040c`).
+  - Where parsing stops, in both READMEs: transfs's requirement #3,
+    jargon.cr's `notes/transfs-requirements.md` (`a8b3d15`, `1aede85`).
+  - The stale TODO entry for the double variadic error dropped
+    (`ea32f23`).
+
+  jargon.rs's cases are synced from `a8b3d15`. After the releases, the
+  site's help demo in `docs/index.html` needs the new output.
 - **A `ui:` keyword**: a strong proposal (the user's words, 2026-06-12) to
   bless `ui:` as a first-class opaque keyword, like `service:`, as sugar
   for GUI hints, which today go in `x-ui`. Not decided; don't treat it as
   settled.
-- **The parse/resolve boundary**: a README section saying Jargon stops at
-  a valid string and resolving it is the program's job (transfs's
-  requirement #3, jargon.cr's `notes/transfs-requirements.md`). Small and
-  uncontroversial, not scheduled.
 - **Follow-ups for completions, positionals and config loading**: in
   jargon.cr's `TODO.md`.
 - **A warning when `project: false` skips a project config that exists**:
