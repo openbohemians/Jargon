@@ -30,12 +30,17 @@
   https://openbohemians.org/jargon.cr/ serves jargon.cr's API docs;
   jargonaut's are at https://docs.rs/jargonaut. Its Rust tab shows
   jargonaut 0.1 from crates.io and `cli.parse()` (`cf8d15e`, `93c9853`).
-- **Help layout**, noticed 2026-10-23 while checking the site's demo
-  against real output: a description sits at the same indent as a
-  long-only flag (six spaces), so it reads as another option, and an
-  enum's values aren't listed. The same in both implementations. Not
-  discussed with the user yet. Fixing it changes help output in both,
-  so it means a release of each (jargon.cr 0.24.0 was suggested).
+- **Help layout**, noticed 2026-10-23: a description sat at the same
+  indent as a long-only flag, so it read as another option, and an
+  enum's values weren't listed. The user chose (2026-10-24) two columns,
+  aligned like `Commands:`, and an enum's values written `[fast|safe]`
+  after the description (not "possible values"), then `(required)` and
+  `[default: …]`. The column stops 32 characters in; a wider flag has
+  its description on the next line. **Committed, not yet released**:
+  jargon.cr `660cb9d` (after `ea32f23`, which drops the stale TODO entry
+  for the double variadic error), jargon.rs `3673600`, synced from
+  `660cb9d`. The user made this 0.24. After the releases, the site's help demo in `docs/index.html`
+  needs the new output.
 - **A `ui:` keyword**: a strong proposal (the user's words, 2026-06-12) to
   bless `ui:` as a first-class opaque keyword, like `service:`, as sugar
   for GUI hints, which today go in `x-ui`. Not decided; don't treat it as
