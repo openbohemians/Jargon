@@ -1,6 +1,6 @@
 # Status
 
-*Updated 2026-10-24*
+*Updated 2026-10-25*
 
 ## Released
 
@@ -43,12 +43,16 @@
     `926239a`).
   - Completion after an abbreviated subcommand, the TODO follow-up
     (`ca10721`, `096040c`).
+  - Completion for the default subcommand: words that name no subcommand
+    go to the default, as for `parse`, and the first word offers the
+    default's flags and values alongside the subcommand names (the user
+    chose that, 2026-10-25; `bea8e7a`, `ba20089`).
   - Where parsing stops, in both READMEs: transfs's requirement #3,
     jargon.cr's `notes/transfs-requirements.md` (`a8b3d15`, `1aede85`).
   - The stale TODO entry for the double variadic error dropped
     (`ea32f23`).
 
-  jargon.rs's cases are synced from `a8b3d15`. After the releases, the
+  jargon.rs's cases are synced from `bea8e7a`. After the releases, the
   site's help demo in `docs/index.html` needs the new output.
 - **A `ui:` keyword**: a strong proposal (the user's words, 2026-06-12) to
   bless `ui:` as a first-class opaque keyword, like `service:`, as sugar
