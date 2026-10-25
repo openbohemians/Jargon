@@ -52,8 +52,10 @@
   - The stale TODO entry for the double variadic error dropped
     (`ea32f23`).
 
-  jargon.rs's cases are synced from `bea8e7a`. After the releases, the
-  site's help demo in `docs/index.html` needs the new output.
+  jargon.rs's cases are synced from `bea8e7a`. The site's two help
+  demos (`docs/index.html`, the terminal's in `docs/script.js`) show the
+  new layout, committed with this line; push them with the releases,
+  since 0.23.0 still prints the old one.
 - **A `ui:` keyword**: a strong proposal (the user's words, 2026-06-12) to
   bless `ui:` as a first-class opaque keyword, like `service:`, as sugar
   for GUI hints, which today go in `x-ui`. Not decided; don't treat it as

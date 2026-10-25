@@ -160,14 +160,10 @@ if (terminal) {
       { type: "output", text: "", pause: 0 },
       { type: "output", text: "Options:", pause: 0 },
       { type: "output", text: "      --db=<object>", pause: 0 },
-      { type: "output", text: "      --db.host=<string> [default: localhost]", pause: 0 },
-      { type: "output", text: "      Database server", pause: 0 },
-      { type: "output", text: "      --db.port=<integer> [default: 5432]", pause: 0 },
-      { type: "output", text: "      Connection port", pause: 0 },
-      { type: "output", text: "      --mode=<string>", pause: 0 },
-      { type: "output", text: "      Server role", pause: 0 },
-      { type: "output", text: "  -v, --verbose", pause: 0 },
-      { type: "output", text: "      Enable verbose logging", pause: 350 },
+      { type: "output", text: "      --db.host=<string>   Database server [default: localhost]", pause: 0 },
+      { type: "output", text: "      --db.port=<integer>  Connection port [default: 5432]", pause: 0 },
+      { type: "output", text: "      --mode=<string>      Server role [primary|replica]", pause: 0 },
+      { type: "output", text: "  -v, --verbose            Enable verbose logging", pause: 350 },
     ],
     run: [
       {
