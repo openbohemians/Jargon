@@ -37,6 +37,22 @@
   Its help demos show v0.23.1's two columns (`c8102e0`), and its terminal
   scrolls long lines sideways on a phone rather than wrapping them
   (`5946a8e`).
+- **Next release: jargon.cr 0.24.0 and jargonaut 0.2.0**, minor bumps,
+  since sections change which config keys reach a subcommand's data.
+  Committed, not pushed or released:
+  - Config sections for subcommands: an object under a subcommand's name
+    is its section, any other key global; a subcommand takes the globals
+    it has an option for, then its whole section (`54440a2`, `542ce7c`).
+    The user chose sections plus globals, sections passed whole, and the
+    bare subcommand name over a reserved key (2026-10-26).
+  - `config_format` in jargon.cr, the block returning anything that can
+    be written as JSON (the user's point, 2026-10-26); YAML stays built
+    in (`8737fe5`). jargon.rs already had it.
+  - Project config per subcommand deferred until a program needs it (the
+    user, 2026-10-26); the shape that adds it without breaking anything
+    is in jargon.cr's TODO.md.
+
+  jargon.rs's cases are synced from `8737fe5`.
 - **A `ui:` keyword**: a strong proposal (the user's words, 2026-06-12) to
   bless `ui:` as a first-class opaque keyword, like `service:`, as sugar
   for GUI hints, which today go in `x-ui`. Not decided; don't treat it as
@@ -45,8 +61,3 @@
   jargon.cr's `TODO.md`.
 - **A warning when `project: false` skips a project config that exists**:
   offered to the user on 2026-10-22, not taken up.
-- **Registered config formats in jargon.cr**, like jargon.rs's
-  `config_format`, so a program can use any parser (oyl.cr, say). The
-  user: "we might end up doing for the crystal what we did for rust ...
-  that makes a lot of sense to me" (2026-10-23). Not decided; to be
-  discussed before building, including whether built-in YAML stays.
