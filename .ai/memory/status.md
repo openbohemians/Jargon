@@ -51,12 +51,18 @@
   - A config format can have several extensions, named on the call
     (`config_format("yaml", "yml")`, in Rust `["yaml", "yml"]` through a
     `ConfigExtensions` trait), not paired by Jargon (the user chose
-    this, 2026-10-26; `6ab33e2`, `44aaffb`).
+    this, 2026-10-26; `6ab33e2`, `44aaffb`). The Rust trait takes one
+    string or an array, slice, or `Vec` of them, owned or borrowed
+    (`39f5db5`).
+  - More specs for both (`cb64746`): sections for an abbreviated
+    subcommand, a nested CLI on standard input, and options from a mixin
+    or a root `$ref`; format blocks returning `YAML::Any`, a NamedTuple,
+    or nil.
   - Project config per subcommand deferred until a program needs it (the
     user, 2026-10-26); the shape that adds it without breaking anything
     is in jargon.cr's TODO.md.
 
-  jargon.rs's cases are synced from `8737fe5`.
+  jargon.rs's cases are synced from `cb64746` (`9fb9048`).
 - **A `ui:` keyword**: a strong proposal (the user's words, 2026-06-12) to
   bless `ui:` as a first-class opaque keyword, like `service:`, as sugar
   for GUI hints, which today go in `x-ui`. Not decided; don't treat it as
