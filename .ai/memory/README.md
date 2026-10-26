@@ -16,7 +16,7 @@ working on the code needs belongs in the project's own docs, not here.
 
 | File | What it holds |
 |---|---|
-| [status.md](status.md) | Released versions, what's ready for the next release (jargon.cr 0.23.1, jargonaut 0.1.1), and the open items: what still names `trans/jargon`, the site, the `ui:` proposal, registered config formats for jargon.cr |
+| [status.md](status.md) | Released versions (jargon.cr v0.23.1, jargonaut 0.1.1), and the open items: what still names `trans/jargon`, the site, the `ui:` proposal, registered config formats for jargon.cr |
 | [layout.md](layout.md) | One project, three repositories: `Jargon` holds `.ai/`, the site, and the folder the two code repositories are cloned in; where the API docs live; setup, what's off the dot-ai spec |
 | [port.md](port.md) | jargon.rs: how it stays in step with jargon.cr (conformance cases), what's decided, the API review's outcome, lessons from the port |
 | [completions.md](completions.md) | Dynamic shell completions (jargon.cr 0.19.0): the design and why, and its known limits |
