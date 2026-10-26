@@ -48,6 +48,10 @@
   - `config_format` in jargon.cr, the block returning anything that can
     be written as JSON (the user's point, 2026-10-26); YAML stays built
     in (`8737fe5`). jargon.rs already had it.
+  - A config format can have several extensions, named on the call
+    (`config_format("yaml", "yml")`, in Rust `["yaml", "yml"]` through a
+    `ConfigExtensions` trait), not paired by Jargon (the user chose
+    this, 2026-10-26; `6ab33e2`, `44aaffb`).
   - Project config per subcommand deferred until a program needs it (the
     user, 2026-10-26); the shape that adds it without breaking anything
     is in jargon.cr's TODO.md.
