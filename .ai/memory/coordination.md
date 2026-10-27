@@ -1,6 +1,6 @@
 # Coordination
 
-*Updated 2026-10-26*
+*Updated 2026-10-27*
 
 This project is `@jargon` (`handle` in `../config.yml`) from 2026-10-23.
 Before that, its sessions were the overseer's, `@projects`, so mail for
@@ -35,10 +35,10 @@ an answer to it reaches @projects, not here.
   extensions, dynamic completions (v0.19.0,
   [completions.md](completions.md)), `--` (v0.19.0), subcommand
   descriptions in help (v0.19.1), and the parse/resolve boundary (the
-  README's "Where Parsing Stops", v0.23.1). The note's last line still
-  calls #5 open. transfs's `shard.lock` has jargon 0.19.0, so it lacks
-  #5; the user plans to update it first thing when transfs work resumes
-  (2026-10-26), then close the note. transfs passes no config defaults,
+  README's "Where Parsing Stops", v0.23.1). The note is closed, at the
+  user's request (2026-10-27, jargon.cr `fac3be7`). transfs's
+  `shard.lock` has jargon 0.19.0, so it lacks #5; the user plans to
+  update it first thing when transfs work resumes. transfs passes no config defaults,
   so 0.24.0's sections don't affect it, but help's layout has changed
   since 0.19.0. Its `docs/architecture.md` still cites the requirements
   at an old path. It has no `.ai/` handle yet.
