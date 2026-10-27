@@ -1,6 +1,6 @@
 # Status
 
-*Updated 2026-10-26*
+*Updated 2026-10-27*
 
 ## Released
 
@@ -57,5 +57,15 @@
   settled.
 - **Follow-ups for completions, positionals and config loading**: in
   jargon.cr's `TODO.md`.
+- **Conventions existing commands use that Jargon lacks** (repeated
+  options, `-` as an argument, a value attached to a short option, and
+  more), found running real command lines against the user's schemas in
+  jargon.cr's `schemas/coreutils/`: listed in jargon.cr's `TODO.md`
+  (`da75c70`) with priorities I proposed, not yet decided by the user.
+  Discuss the design of `-` as an argument and of optional option values
+  before implementing.
+- **CI** runs in both repos since 2026-10-27: jargon.cr on Crystal 1.18.2
+  and the latest, with format and ameba; jargonaut on Rust 1.88 and
+  stable, with fmt, clippy and docs.
 - **A warning when `project: false` skips a project config that exists**:
   offered to the user on 2026-10-22, not taken up.
