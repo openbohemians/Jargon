@@ -221,7 +221,7 @@ if (terminal) {
       { type: "output", text: "}", pause: 350 },
       {
         type: "prompt",
-        text: "$ echo '{\"db\": {\"host\": \"db.local\"}, \"mode\": \"replica\"}' | mycmd -",
+        text: "$ echo '{\"db\": {\"host\": \"db.local\"}, \"mode\": \"replica\"}' | mycmd -@",
         pause: 250,
       },
       { type: "output", text: "{", pause: 0 },
