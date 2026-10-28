@@ -122,6 +122,12 @@
   never several: the user asked, and I explained it couldn't tell where
   its values end (`cp --sources a b dir/`).
 
+  Committed, not yet released or pushed: an unknown option names only a
+  close match, never the whole list (60 options for `ls`), in jargon.cr
+  `43fa3c4` and jargonaut `df660f5`; the user said to do it (2026-10-28).
+  I chose to drop the list for small schemas too, so the message doesn't
+  depend on the schema's size.
+
   The rest of the list is open; discuss optional option values before
   implementing.
 - **CI** runs in both repos since 2026-10-27: jargon.cr on Crystal 1.18.2
