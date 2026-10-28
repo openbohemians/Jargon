@@ -1,6 +1,6 @@
 # Status
 
-*Updated 2026-10-27*
+*Updated 2026-10-28*
 
 ## Released
 
@@ -65,7 +65,13 @@
   ones done (2026-10-27), unreleased: repeated array options add up, a
   lone `-` among other arguments is a value, and a short flag takes an
   attached value as getopt does (`-w80`, `-o=x` gives `=x`), in jargon.cr
-  `4ae4bf4` and jargonaut `0feb0ae`. Open: the user wants one standard
+  `4ae4bf4` and jargonaut `0feb0ae`. Then (2026-10-28) arrays stopped
+  splitting at commas: a property's `separator` names where to split,
+  from four names, not characters (`comma`, `colon`, `semicolon`,
+  `whitespace`, or a list), as the user chose; breaking, in jargon.cr
+  `5496d56` and jargonaut `39d617c`. Unreleased; I suggested one release
+  (0.25.0, 0.3.0) for these and `--`, not yet decided. jargon.cr's README
+  already says "Before 0.25.0" for the separator. Open: the user wants one standard
   JSON-on-stdin trigger for every CLI, not a per-CLI setting, and is
   weighing a lone `--` in place of `-` (breaks xerp; the TODO has the
   trade-offs). Discuss optional option values before implementing too.
