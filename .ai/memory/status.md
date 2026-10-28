@@ -74,9 +74,11 @@
   already says "Before 0.25.0" for the separator. JSON from stdin is now
   `-@` for every CLI, not a lone `-` (the user chose it, 2026-10-28, over
   `--`, a reserved long option, and `@-`; files via `-@ < file`), in
-  jargon.cr `10735d5` and jargonaut `09afe6b`, also breaking. At release:
-  the site's "Stdin JSON mode" card still says "a single dash", and xerp
-  must switch `-` to `-@` when it upgrades. Discuss optional option values
+  jargon.cr `10735d5` and jargonaut `09afe6b`, also breaking. The site's
+  card and stdin demo say `-@` (`196948b`), and jargon.cr's `eg/pretty.cr`
+  splits its tags at commas (`cd1ee5c`). xerp was mailed about `-@`
+  (2026-10-28, `mail/sent/`): it is pinned at jargon 0.15.0 and has no
+  array options, so only `-@` affects it. Discuss optional option values
   before implementing.
 - **CI** runs in both repos since 2026-10-27: jargon.cr on Crystal 1.18.2
   and the latest, with format and ameba; jargonaut on Rust 1.88 and
