@@ -61,9 +61,14 @@
   options, `-` as an argument, a value attached to a short option, and
   more), found running real command lines against the user's schemas in
   jargon.cr's `schemas/coreutils/`: listed in jargon.cr's `TODO.md`
-  (`da75c70`) with priorities I proposed, not yet decided by the user.
-  Discuss the design of `-` as an argument and of optional option values
-  before implementing.
+  (`da75c70`) with priorities I proposed. The user had the uncontroversial
+  ones done (2026-10-27), unreleased: repeated array options add up, a
+  lone `-` among other arguments is a value, and a short flag takes an
+  attached value as getopt does (`-w80`, `-o=x` gives `=x`), in jargon.cr
+  `4ae4bf4` and jargonaut `0feb0ae`. Open: the user wants one standard
+  JSON-on-stdin trigger for every CLI, not a per-CLI setting, and is
+  weighing a lone `--` in place of `-` (breaks xerp; the TODO has the
+  trade-offs). Discuss optional option values before implementing too.
 - **CI** runs in both repos since 2026-10-27: jargon.cr on Crystal 1.18.2
   and the latest, with format and ameba; jargonaut on Rust 1.88 and
   stable, with fmt, clippy and docs.
