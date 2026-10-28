@@ -4,6 +4,16 @@
 
 ## Released
 
+- **jargon.cr v0.26.0** (`b2d722b`, 2026-10-28), tagged and on GitHub
+  releases, and **jargonaut 0.4.0** on crates.io, published from jargon.rs
+  `f25ccb7` and tagged `v0.4.0` (the user said to release them,
+  2026-10-28). Breaking: a variadic positional is marked with `*`. Also in
+  them: positionals can follow the variadic, a positional given as an
+  option gives up its place (the variadic never does), options anywhere
+  among a variadic's words, positionals listed under Options in help, and
+  a variadic reading on past `--`; see Conventions, below. The site shows
+  jargonaut 0.4. jargonaut's cases are synced from jargon.cr `c7c29ec`,
+  the last spec change before v0.26.0.
 - **jargon.cr v0.25.0** (`1dba094`, 2026-10-28), tagged and on GitHub
   releases, and **jargonaut 0.3.0** on crates.io, published from jargon.rs
   `988b369` and tagged `v0.3.0` (the user said to release them,
@@ -88,16 +98,15 @@
     `mail/sent/`): it is pinned at jargon 0.15.0 and has no array
     options, so only `-@` affects it.
 
-  Unreleased: a `*` marks the variadic positional, wherever it is
-  (`["sources*", "dest"]`), and the positionals after it take the last
-  words of its run, so `cp a b dir/` works. The user proposed the `*` and
-  chose to require it (2026-10-28) over keeping the last array implicitly
-  variadic. Breaking, in jargon.cr `d1c6fbd` and jargonaut `ee9b420`; the
-  README says "Before 0.26.0", the version I'd suggest, not yet decided.
-  It also fixed a variadic's run stopping at `--` and dropping the words
-  after it.
+  Released in v0.26.0 and 0.4.0 (above): a `*` marks the variadic
+  positional, wherever it is (`["sources*", "dest"]`), and the positionals
+  after it take the last words, so `cp a b dir/` works. The user proposed
+  the `*` and chose to require it (2026-10-28) over keeping the last array
+  implicitly variadic. Breaking, in jargon.cr `d1c6fbd` and jargonaut
+  `ee9b420`; the README says "Before 0.26.0". It also fixed a variadic
+  stopping at `--` and dropping the words after it.
 
-  Also unreleased: a positional given by name gives up its slot, wherever
+  Also in them: a positional given by name gives up its slot, wherever
   the option is, so `grep -e foo a b` and `cp -t dir/ a b` read right, and
   options can come anywhere among a variadic's words (`cat a -n b`). Help
   lists positionals under Options too, and completion offers them as
