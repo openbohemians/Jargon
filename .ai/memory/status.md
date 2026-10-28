@@ -4,6 +4,15 @@
 
 ## Released
 
+- **jargon.cr v0.25.0** (`1dba094`, 2026-10-28), tagged and on GitHub
+  releases, and **jargonaut 0.3.0** on crates.io, published from jargon.rs
+  `988b369` and tagged `v0.3.0` (the user said to release them,
+  2026-10-28). Both break existing CLIs: JSON from stdin is `-@`, and
+  arrays split only at a named `separator`. Also in them: repeated array
+  options add up, a lone `-` is a value, and a short flag takes an
+  attached value; see Conventions, below. The site shows `-@` and
+  jargonaut 0.3. jargonaut's cases are synced from jargon.cr `10735d5`,
+  the last spec change before v0.25.0.
 - **jargon.cr v0.24.0** (`ea8c9bf`, 2026-10-26), tagged and on GitHub
   releases, a minor bump, since sections change which config keys reach
   a subcommand's data:
@@ -47,7 +56,7 @@
   2026-10-23 (see [layout.md](layout.md)), and
   https://openbohemians.org/jargon.cr/ serves jargon.cr's API docs;
   jargonaut's are at https://docs.rs/jargonaut. Its Rust tab shows
-  jargonaut 0.2 from crates.io and `cli.parse()` (`cf8d15e`, `93c9853`).
+  jargonaut 0.3 from crates.io and `cli.parse()` (`cf8d15e`, `93c9853`).
   Its help demos show v0.23.1's two columns (`c8102e0`), and its terminal
   scrolls long lines sideways on a phone rather than wrapping them
   (`5946a8e`).
@@ -61,25 +70,26 @@
   options, `-` as an argument, a value attached to a short option, and
   more), found running real command lines against the user's schemas in
   jargon.cr's `schemas/coreutils/`: listed in jargon.cr's `TODO.md`
-  (`da75c70`) with priorities I proposed. The user had the uncontroversial
-  ones done (2026-10-27), unreleased: repeated array options add up, a
-  lone `-` among other arguments is a value, and a short flag takes an
-  attached value as getopt does (`-w80`, `-o=x` gives `=x`), in jargon.cr
-  `4ae4bf4` and jargonaut `0feb0ae`. Then (2026-10-28) arrays stopped
-  splitting at commas: a property's `separator` names where to split,
-  from four names, not characters (`comma`, `colon`, `semicolon`,
-  `whitespace`, or a list), as the user chose; breaking, in jargon.cr
-  `5496d56` and jargonaut `39d617c`. Unreleased; I suggested one release
-  (0.25.0, 0.3.0) for these and `--`, not yet decided. jargon.cr's README
-  already says "Before 0.25.0" for the separator. JSON from stdin is now
-  `-@` for every CLI, not a lone `-` (the user chose it, 2026-10-28, over
-  `--`, a reserved long option, and `@-`; files via `-@ < file`), in
-  jargon.cr `10735d5` and jargonaut `09afe6b`, also breaking. The site's
-  card and stdin demo say `-@` (`196948b`), and jargon.cr's `eg/pretty.cr`
-  splits its tags at commas (`cd1ee5c`). xerp was mailed about `-@`
-  (2026-10-28, `mail/sent/`): it is pinned at jargon 0.15.0 and has no
-  array options, so only `-@` affects it. Discuss optional option values
-  before implementing.
+  (`da75c70`) with priorities I proposed. Released in v0.25.0 and 0.3.0
+  (above):
+  - the uncontroversial ones (the user, 2026-10-27): repeated array
+    options add up, a lone `-` among other arguments is a value, and a
+    short flag takes an attached value as getopt does (`-w80`, `-o=x`
+    gives `=x`), in jargon.cr `4ae4bf4` and jargonaut `0feb0ae`;
+  - arrays split only where a property's `separator` says, from four
+    names, not characters (`comma`, `colon`, `semicolon`, `whitespace`,
+    or a list), as the user chose (2026-10-28); breaking, in jargon.cr
+    `5496d56` and jargonaut `39d617c`;
+  - JSON from stdin is `-@` for every CLI, not a lone `-` (the user chose
+    it, 2026-10-28, over `--`, a reserved long option, and `@-`; files via
+    `-@ < file`), in jargon.cr `10735d5` and jargonaut `09afe6b`; also
+    breaking. The site shows it (`196948b`), and `eg/pretty.cr` splits its
+    tags at commas (`cd1ee5c`). xerp was mailed (2026-10-28,
+    `mail/sent/`): it is pinned at jargon 0.15.0 and has no array
+    options, so only `-@` affects it.
+
+  The rest of the list is open; discuss optional option values before
+  implementing.
 - **CI** runs in both repos since 2026-10-27: jargon.cr on Crystal 1.18.2
   and the latest, with format and ameba; jargonaut on Rust 1.88 and
   stable, with fmt, clippy and docs.
