@@ -105,7 +105,13 @@
   option and `positional` adds the words. They turned down letting `short`
   mark a positional as an option, and asked about defining positionals
   apart from `properties` before choosing this. In jargon.cr `88b0dae` and
-  jargonaut `6cad22a`.
+  jargonaut `6cad22a`. Then the variadic stopped being skipped: words go
+  to the positionals with room, and a variadic is never full, so its words
+  add to what an option gave it (`cp --sources a b dir/` gave `dest: b`).
+  The user agreed `dir/` should be `dest` (2026-10-28); in jargon.cr
+  `c7c29ec` and jargonaut `2bcc9df`. An option takes one value each time,
+  never several: the user asked, and I explained it couldn't tell where
+  its values end (`cp --sources a b dir/`).
 
   The rest of the list is open; discuss optional option values before
   implementing.
