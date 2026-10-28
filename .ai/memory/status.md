@@ -88,6 +88,19 @@
     `mail/sent/`): it is pinned at jargon 0.15.0 and has no array
     options, so only `-@` affects it.
 
+  Unreleased: a `*` marks the variadic positional, wherever it is
+  (`["sources*", "dest"]`), and the positionals after it take the last
+  words of its run, so `cp a b dir/` works. The user proposed the `*` and
+  chose to require it (2026-10-28) over keeping the last array implicitly
+  variadic. Breaking, in jargon.cr `d1c6fbd` and jargonaut `ee9b420`; the
+  README says "Before 0.26.0", the version I'd suggest, not yet decided.
+  It also fixed a variadic's run stopping at `--` and dropping the words
+  after it.
+
+  Raised with the user, not decided: `--file in out` gives `file: "out"`,
+  because the first positional slot still takes a word after `file` was
+  set by name. I suggested skipping a slot whose property is already set.
+
   The rest of the list is open; discuss optional option values before
   implementing.
 - **CI** runs in both repos since 2026-10-27: jargon.cr on Crystal 1.18.2
