@@ -97,9 +97,15 @@
   It also fixed a variadic's run stopping at `--` and dropping the words
   after it.
 
-  Raised with the user, not decided: `--file in out` gives `file: "out"`,
-  because the first positional slot still takes a word after `file` was
-  set by name. I suggested skipping a slot whose property is already set.
+  Also unreleased: a positional given by name gives up its slot, wherever
+  the option is, so `grep -e foo a b` and `cp -t dir/ a b` read right, and
+  options can come anywhere among a variadic's words (`cat a -n b`). Help
+  lists positionals under Options too, and completion offers them as
+  flags. The user wanted no exceptions (2026-10-28): every property is an
+  option and `positional` adds the words. They turned down letting `short`
+  mark a positional as an option, and asked about defining positionals
+  apart from `properties` before choosing this. In jargon.cr `88b0dae` and
+  jargonaut `6cad22a`.
 
   The rest of the list is open; discuss optional option values before
   implementing.
