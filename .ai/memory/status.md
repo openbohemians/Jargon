@@ -1,6 +1,6 @@
 # Status
 
-*Updated 2026-10-28*
+*Updated 2026-10-31*
 
 ## Released
 
@@ -130,6 +130,12 @@
 
   The rest of the list is open; discuss optional option values before
   implementing.
+- **No browser tests until the user says so.** @my relayed the user's
+  request (2026-10-29, `mail/received/20261029-033245Z-@my--urgent-stop-runaway-wpe-webkit-playwright-job-now-4a0731a5.md`)
+  to stop runaway WebKit and Playwright jobs on this machine, and to
+  launch none until the user gives the go-ahead. This project owned none
+  (checked 2026-10-31, and answered). Ask before using playwright-cli to
+  check the site.
 - **CI** runs in both repos since 2026-10-27: jargon.cr on Crystal 1.18.2
   and the latest, with format and ameba; jargonaut on Rust 1.88 and
   stable, with fmt, clippy and docs.
